@@ -1,0 +1,54 @@
+
+State Machine - |tictactoe|board[9]
+Name board[9].Y board[9].X board[9].EMPTY 
+board[9].EMPTY 0 0 0 
+board[9].X 0 1 1 
+board[9].Y 1 0 1 
+
+State Machine - |tictactoe|board[8]
+Name board[8].Y board[8].X board[8].EMPTY 
+board[8].EMPTY 0 0 0 
+board[8].X 0 1 1 
+board[8].Y 1 0 1 
+
+State Machine - |tictactoe|board[7]
+Name board[7].Y board[7].X board[7].EMPTY 
+board[7].EMPTY 0 0 0 
+board[7].X 0 1 1 
+board[7].Y 1 0 1 
+
+State Machine - |tictactoe|board[6]
+Name board[6].Y board[6].X board[6].EMPTY 
+board[6].EMPTY 0 0 0 
+board[6].X 0 1 1 
+board[6].Y 1 0 1 
+
+State Machine - |tictactoe|board[5]
+Name board[5].Y board[5].X board[5].EMPTY 
+board[5].EMPTY 0 0 0 
+board[5].X 0 1 1 
+board[5].Y 1 0 1 
+
+State Machine - |tictactoe|board[4]
+Name board[4].Y board[4].X board[4].EMPTY 
+board[4].EMPTY 0 0 0 
+board[4].X 0 1 1 
+board[4].Y 1 0 1 
+
+State Machine - |tictactoe|board[3]
+Name board[3].Y board[3].X board[3].EMPTY 
+board[3].EMPTY 0 0 0 
+board[3].X 0 1 1 
+board[3].Y 1 0 1 
+
+State Machine - |tictactoe|board[2]
+Name board[2].Y board[2].X board[2].EMPTY 
+board[2].EMPTY 0 0 0 
+board[2].X 0 1 1 
+board[2].Y 1 0 1 
+
+State Machine - |tictactoe|board[1]
+Name board[1].Y board[1].X board[1].EMPTY 
+board[1].EMPTY 0 0 0 
+board[1].X 0 1 1 
+board[1].Y 1 0 1 

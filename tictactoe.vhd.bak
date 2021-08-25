@@ -1,0 +1,10 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tictactoe is 
+	port(
+		mode : in std_logic;
+		
+	);
+end tictactoe;
+

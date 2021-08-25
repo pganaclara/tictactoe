@@ -1,0 +1,7 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+package TTTdefs is
+  type Square is (EMPTY, X, Y);
+  type Grid is array (1 to 9) of Square;
+end TTTdefs;
