@@ -1,5 +1,5 @@
 Flow report for tictactoe
-Wed Aug 25 13:52:37 2021
+Thu Aug 26 17:58:19 2021
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -41,24 +41,24 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed Aug 25 13:52:37 2021      ;
+; Flow Status                        ; Flow Failed - Thu Aug 26 17:58:19 2021     ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; tictactoe                                  ;
 ; Top-level Entity Name              ; tictactoe                                  ;
 ; Family                             ; MAX 10                                     ;
 ; Device                             ; 10M50DCF672C7G                             ;
 ; Timing Models                      ; Preliminary                                ;
-; Total logic elements               ; 258                                        ;
-;     Total combinational functions  ; 258                                        ;
-;     Dedicated logic registers      ; 35                                         ;
-; Total registers                    ; 35                                         ;
-; Total pins                         ; 68                                         ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
-; UFM blocks                         ; 0                                          ;
-; ADC blocks                         ; 0                                          ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
+; UFM blocks                         ; N/A until Partition Merge                  ;
+; ADC blocks                         ; N/A until Partition Merge                  ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -67,7 +67,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/25/2021 13:52:27 ;
+; Start date & time ; 08/26/2021 17:58:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; tictactoe           ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 180747811388555.162991034612496 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 180747811388555.163001148906928 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
@@ -95,8 +95,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4802 MB             ; 00:00:23                           ;
-; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:23                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4785 MB             ; 00:00:27                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:27                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
