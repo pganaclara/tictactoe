@@ -10,15 +10,28 @@ end tb_tictactoe;
 
 architecture teste of tb_tictactoe is
 
-component TwoInARow is
-    port ( PLAYER: in Square;
-           BOARD: in Grid;
-           MOVE: out natural );
-  end component;
+component tictactoe is
+  port( CLK: in std_logic;
+        YMOVE: in natural;
+        XMOVE: out natural;
+        XWIN: out std_logic;
+        DRAW: out std_logic;
+        MAKEMOVE: in std_logic;
+        MOVEMADE: out std_logic;
+        RESET: std_logic
+  );
+end component;
 
-signal data_in          : Square;
-signal board				: Grid;
+signal data_in          : natural;
 signal data_output      : natural;
+signal clock				: std_logic;
+signal rst					: std_logic;
+signal xwin					: std_logic;
+signal draw					: std_logic;
+signal makemove			: std_logic;
+signal movemade			: std_logic;
+constant max_value      : natural := 4;
+constant mim_value		: natural := 1;
 
 signal read_data_in    : std_logic:='0';
 signal flag_write      : std_logic:='0';   
@@ -33,14 +46,14 @@ constant OFFSET     : time := 5 ns;
 
 begin
 -- Instantiate the Unit Under Test (UUT) or Design Under Test (DUT)
-UUT: TwoInARow port map(PLAYER => data_in, BOARD => board, MOVE => data_output);
+UUT: tictactoe port map(CLK => clock,YMOVE => data_in, XMOVE => data_output, XWIN => xwin, DRAW => draw, MAKEMOVE => makemove, MOVEMADE => movemade, RESET => rst);
 
 ------------------------------------------------------------------------------------
 ----------------- processo para leer os dados do arquivo data_in.txt
 ------------------------------------------------------------------------------------
 read_inputs_data_in:process
 		variable linea : line;
-		variable input : Square;
+		variable input : natural;
 	begin
 		while not endfile(inputs_data_in) loop
 		      if read_data_in = '1' then
@@ -89,7 +102,7 @@ read_inputs_data_in:process
    
 	write_outputs:process
 		variable linea  : line;
-		variable output : std_logic_vector (7 downto 0);
+		variable output : natural;
 	begin
 		while true loop
 			if (flag_write ='1')then

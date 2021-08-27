@@ -63,6 +63,7 @@ begin
     linemove :=  L(PLAYER, BOARD);
     colmove :=  C(PLAYER, BOARD);
     diagmove := D(PLAYER, BOARD);
+	 -- vê qual movimento pode fazer pra ganhar/bloquear
     if    linemove /= 0  then MOVE <= linemove;
     elsif colmove /= 0  then MOVE <= colmove;
     elsif diagmove /= 0 then MOVE <= diagmove;

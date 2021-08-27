@@ -2,11 +2,6 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use work.TTTdefs.all;
 
--- When MAKEMOVE is enabled, take in YMOVE, and try to play this move on
--- the board. When MOVEMADE goes high, this is X's move value. If it is 10,
--- then the previous YMOVE was illegal.
--- When XWIN is high, X wins the game. When DRAW is high, a draw.
--- To reset the game, assert RESET.
 entity tictactoe is
   port( CLK: in std_logic;
         YMOVE: in natural;
@@ -34,12 +29,14 @@ architecture behavioral of tictactoe is
   signal blocking_move: natural;
 
 begin
+-- Procura uma jogada para ganhar, ou seja, procura se tem alguma linha, coluna ou diagonal faltando apenas 1 casa
   winmove: TwoInARow port map (
     PLAYER => X,
     BOARD => board,
     MOVE => winning_move
   );
 
+ -- Procura uma jogada pra bloquear o outro jogador se ele estiver proximo a ganhar
   blockmove: TwoInARow port map (
     PLAYER => Y,
     BOARD => board,
@@ -59,20 +56,19 @@ begin
 
       case state is
         when YMOVING =>
-          -- Y faz o movimento
+          -- Y faz o movimento (o jogador)
           MOVEMADE <= '0';
           if (MAKEMOVE = '1') then
-            report "O movimento escolhido foi " & integer'image(ymove);
-            -- Se não puder fazer XMOVE é 0
-            if (board(YMOVE) /= EMPTY) then
-              XMOVE <= 10; MOVEMADE <= '1';
+            report "O movimento escolhido foi " & integer'image(ymove); -- indica qual movimento o jogador quer fazer
+            if (board(YMOVE) /= EMPTY) then -- se a casa estiver ocupada ele não pode fazer e passa a vez
+              XMOVE <= 0; MOVEMADE <= '1';
             else
-              board(YMOVE) <= Y;        -- O jogador pode fazer o movimento.
+              board(YMOVE) <= Y;        -- Se a casa estiver vazia, o jogador pode fazer o movimento.
               state <= XMOVING;
             end if;
           end if;
 
-        when XMOVING =>
+        when XMOVING => -- imprime o tabuleiro
 			report "Tabuleiro: ";
 			report "   " & Square'image(board(1)) & " | " & Square'image(board(2)) & " | " & Square'image(board(3));
 			report "   " & Square'image(board(4)) & " | " & Square'image(board(5)) & " | " & Square'image(board(6));
@@ -86,21 +82,21 @@ begin
             XMOVE <= winning_move; board(winning_move) <= X;
             XWIN <= '1';
           elsif (blocking_move /= 0) then
-            report "Movimento bloquador" & integer'image(blocking_move);
+            report "Movimento bloqueador" & integer'image(blocking_move);
             XMOVE <= blocking_move; board(blocking_move) <= X;
 
           -- Se não tiver, vai pra qualquer vazio
-          elsif (board(5) = EMPTY) then XMOVE <= 5; board(5) <= X; -- report "Move 5";
-          elsif (board(1) = EMPTY) then XMOVE <= 1; board(1) <= X; -- report "Move 1";
-          elsif (board(3) = EMPTY) then XMOVE <= 3; board(3) <= X; -- report "Move 3";
-          elsif (board(7) = EMPTY) then XMOVE <= 7; board(7) <= X; -- report "Move 7";
-          elsif (board(9) = EMPTY) then XMOVE <= 9; board(9) <= X; -- report "Move 9";
-          elsif (board(2) = EMPTY) then XMOVE <= 2; board(2) <= X; -- report "Move 2";
-          elsif (board(4) = EMPTY) then XMOVE <= 4; board(4) <= X; -- report "Move 4";
-          elsif (board(6) = EMPTY) then XMOVE <= 6; board(6) <= X; -- report "Move 6";
-          elsif (board(8) = EMPTY) then XMOVE <= 8; board(8) <= X; -- report "Move 8";
+          elsif (board(5) = EMPTY) then XMOVE <= 5; board(5) <= X; 
+          elsif (board(1) = EMPTY) then XMOVE <= 1; board(1) <= X; 
+          elsif (board(3) = EMPTY) then XMOVE <= 3; board(3) <= X; 
+          elsif (board(7) = EMPTY) then XMOVE <= 7; board(7) <= X; 
+          elsif (board(9) = EMPTY) then XMOVE <= 9; board(9) <= X; 
+          elsif (board(2) = EMPTY) then XMOVE <= 2; board(2) <= X; 
+          elsif (board(4) = EMPTY) then XMOVE <= 4; board(4) <= X;
+          elsif (board(6) = EMPTY) then XMOVE <= 6; board(6) <= X; 
+          elsif (board(8) = EMPTY) then XMOVE <= 8; board(8) <= X; 
 
-          -- Se não tiver movimento vazio e ninguém ganhou é empate
+          -- Se não tiver movimento vazio é empate
           else XMOVE <= 0; DRAW <= '1';
                report "Empate";
           end if;
