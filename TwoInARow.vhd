@@ -8,7 +8,7 @@ entity TwoInARow is
          MOVE: out natural );
 end TwoInARow;
 
-architecture behavioral of TwoInARow is
+architecture TwoInARow_arch of TwoInARow is
 
   -- Achar o quadrado vazio na linha
   function L(P: Square; B: Grid) return natural is
@@ -70,4 +70,4 @@ begin
     else MOVE <= 0;
     end if;
   end process;
-end behavioral;
+end TwoInARow_arch;

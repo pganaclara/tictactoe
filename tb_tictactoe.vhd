@@ -16,8 +16,6 @@ component tictactoe is
         XMOVE: out natural;
         XWIN: out std_logic;
         DRAW: out std_logic;
-        MAKEMOVE: in std_logic;
-        MOVEMADE: out std_logic;
         RESET: std_logic
   );
 end component;
@@ -28,8 +26,6 @@ signal clock				: std_logic;
 signal rst					: std_logic;
 signal xwin					: std_logic;
 signal draw					: std_logic;
-signal makemove			: std_logic;
-signal movemade			: std_logic;
 constant max_value      : natural := 4;
 constant mim_value		: natural := 1;
 
@@ -46,7 +42,24 @@ constant OFFSET     : time := 5 ns;
 
 begin
 -- Instantiate the Unit Under Test (UUT) or Design Under Test (DUT)
-UUT: tictactoe port map(CLK => clock,YMOVE => data_in, XMOVE => data_output, XWIN => xwin, DRAW => draw, MAKEMOVE => makemove, MOVEMADE => movemade, RESET => rst);
+UUT: tictactoe port map(CLK => clock,YMOVE => data_in, XMOVE => data_output, XWIN => xwin, DRAW => draw, RESET => rst);
+
+
+process
+begin
+	clock <= '0';
+	wait for 1ns;
+	clock <= '1';
+	wait for 1ns;
+end process;
+
+process
+begin
+	rst<='1';
+	wait for 305ns;
+	rst <= '0';
+	wait for 2ns;
+end process;
 
 ------------------------------------------------------------------------------------
 ----------------- processo para leer os dados do arquivo data_in.txt

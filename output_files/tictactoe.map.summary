@@ -1,16 +1,16 @@
-Analysis & Synthesis Status : Successful - Fri Aug 27 12:13:37 2021
+Analysis & Synthesis Status : Failed - Mon Aug 30 19:33:05 2021
 Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Web Edition
 Revision Name : tictactoe
 Top-level Entity Name : tictactoe
 Family : MAX 10
-Total logic elements : 253
-    Total combinational functions : 253
-    Dedicated logic registers : 35
-Total registers : 35
-Total pins : 68
-Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
-UFM blocks : 0
-ADC blocks : 0
+Total logic elements : N/A until Partition Merge
+    Total combinational functions : N/A until Partition Merge
+    Dedicated logic registers : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total memory bits : N/A until Partition Merge
+Embedded Multiplier 9-bit elements : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge
+UFM blocks : N/A until Partition Merge
+ADC blocks : N/A until Partition Merge

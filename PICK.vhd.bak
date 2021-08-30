@@ -1,0 +1,30 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use work.TTTdefs.all;
+
+entity PICK is 
+port (
+			PLAYER: in Square;
+         BOARD: in Grid;
+			WINMV, BLKMV: in natural;
+         MOVE: out natural
+);
+end PICK;
+
+architecture PICK_arch of PICK is
+begin
+	process (PLAYER, BOARD, WINMV, BLKMV)
+	if (WINMV /= NONE) then MOVE <= WINMV;
+	else if (BLKMV /= NONE) then MOVE <= BLKMV;
+	elsif (board(5) = EMPTY) then MOVE <= 5;  
+	elsif (board(1) = EMPTY) then MOVE <= 1; 
+	elsif (board(3) = EMPTY) then MOVE <= 3;
+	elsif (board(7) = EMPTY) then MOVE <= 7;  
+	elsif (board(9) = EMPTY) then MOVE <= 9;
+	elsif (board(2) = EMPTY) then MOVE <= 2;  
+	elsif (board(4) = EMPTY) then MOVE <= 4;
+	elsif (board(6) = EMPTY) then MOVE <= 6; 
+	elsif (board(8) = EMPTY) then MOVE <= 8; 
+	end if;
+end process;
+end PICK_arch
