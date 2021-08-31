@@ -16,14 +16,14 @@ component tictactoe is
         XMOVE: out natural;
         XWIN: out std_logic;
         DRAW: out std_logic;
-        RESET: std_logic
+        RESET: in std_logic
   );
 end component;
 
 signal data_in          : natural;
 signal data_output      : natural;
-signal clock				: std_logic;
-signal rst					: std_logic;
+signal clk					: std_logic := '0';
+signal rst					: std_logic := '0';
 signal xwin					: std_logic;
 signal draw					: std_logic;
 constant max_value      : natural := 4;
@@ -42,24 +42,34 @@ constant OFFSET     : time := 5 ns;
 
 begin
 -- Instantiate the Unit Under Test (UUT) or Design Under Test (DUT)
-UUT: tictactoe port map(CLK => clock,YMOVE => data_in, XMOVE => data_output, XWIN => xwin, DRAW => draw, RESET => rst);
+UUT: tictactoe port map(CLK => clk,YMOVE => data_in, XMOVE => data_output, XWIN => xwin, DRAW => draw, RESET => rst);
 
+------------------------------------------------------------------------------------
+----------------- processo para gerar o sinal de clock 
+------------------------------------------------------------------------------------		
+        PROCESS    -- clock process for clock
+        BEGIN
+            WAIT for OFFSET;
+            CLOCK_LOOP : LOOP
+                clk <= '0';
+                WAIT FOR (PERIOD - (PERIOD * DUTY_CYCLE));
+                clk <= '1';
+                WAIT FOR (PERIOD * DUTY_CYCLE);
+            END LOOP CLOCK_LOOP;
+        END PROCESS;
 
-process
-begin
-	clock <= '0';
-	wait for 1ns;
-	clock <= '1';
-	wait for 1ns;
-end process;
-
-process
-begin
-	rst<='1';
-	wait for 305ns;
-	rst <= '0';
-	wait for 2ns;
-end process;
+------------------------------------------------------------------------------------
+----------------- processo para gerar o estimulo de reset
+------------------------------------------------------------------------------------		
+	sreset: process
+	begin
+		rst <= '1';
+		for i in 1 to 4 loop
+			wait until rising_edge(clk);
+		end loop;
+		rst <= '0'; 
+		wait;	
+	end process sreset;
 
 ------------------------------------------------------------------------------------
 ----------------- processo para leer os dados do arquivo data_in.txt

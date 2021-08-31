@@ -50,6 +50,8 @@ begin
 			report "   " & Square'image(board(7)) & " | " & Square'image(board(8)) & " | " & Square'image(board(9));
           state <= YMOVING;
 			 
+		-- lógica de ganha ou empata do PICK.vhd
+		
       end case;
     end if;
   end process;

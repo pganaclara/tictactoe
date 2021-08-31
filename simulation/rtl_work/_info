@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/altera/14.1/tictactoe/simulation
 Etb_tictactoe
-Z1 w1630358952
+Z1 w1630369092
 Z2 DPx4 work 7 tttdefs 0 22 Aem^GR:hY_^b8Lf_<k]AP0
 Z3 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
@@ -24,9 +24,9 @@ VHFEbX8=abe8VMdW;0J_[=0
 !s100 V0]1c7>>>m?=mdOW=FYeN2
 Z9 OV;C;10.3c;59
 31
-Z10 !s110 1630359039
+Z10 !s110 1630372889
 !i10b 1
-Z11 !s108 1630359039.584000
+Z11 !s108 1630372889.360000
 Z12 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/tb_tictactoe.vhd|
 Z13 !s107 C:/altera/14.1/tictactoe/tb_tictactoe.vhd|
 !i113 1
@@ -41,8 +41,8 @@ R6
 DEx4 work 12 tb_tictactoe 0 22 HFEbX8=abe8VMdW;0J_[=0
 l43
 L11
-V2IGB_KR_bL13MZM=Q8G[D1
-!s100 F9T3dUH3CW<0=zKo@dOof1
+VcE>N6f7LzGoW47>L7hbKe1
+!s100 6QmR<Q<7WA31GZ6S9hM331
 R9
 31
 R10
@@ -54,7 +54,7 @@ R13
 R14
 R15
 Etictactoe
-Z16 w1630358989
+Z16 w1630372819
 R2
 R5
 R6
@@ -63,13 +63,13 @@ Z17 8C:/altera/14.1/tictactoe/tictactoe.vhd
 Z18 FC:/altera/14.1/tictactoe/tictactoe.vhd
 l0
 L5
-VBP7Tg>aPHfIf_76;]Fd512
-!s100 X<0cNR2X:aGPgG@DaP<N51
+V[_@zdNJcDP<iRcN90N5`I1
+!s100 SkZS2DO2Y^53<2MNMe6[@1
 R9
 31
-Z19 !s110 1630359038
+Z19 !s110 1630372888
 !i10b 1
-Z20 !s108 1630359038.782000
+Z20 !s108 1630372888.519000
 Z21 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/tictactoe.vhd|
 Z22 !s107 C:/altera/14.1/tictactoe/tictactoe.vhd|
 !i113 1
@@ -79,11 +79,11 @@ Abehavioral
 R2
 R5
 R6
-DEx4 work 9 tictactoe 0 22 BP7Tg>aPHfIf_76;]Fd512
-l29
+DEx4 work 9 tictactoe 0 22 [_@zdNJcDP<iRcN90N5`I1
+l28
 L15
-Vc4JXX<h^>SgUKc3HGe`IZ2
-!s100 Bck50cQd63TCfI>S=Ci2_0
+VVXDZ5]Ql4E=]gY@C:zgkc1
+!s100 XHRJj[X>jXaPBaePERO=k0
 R9
 31
 R19
@@ -109,14 +109,14 @@ R9
 31
 R19
 !i10b 1
-!s108 1630359038.704000
+!s108 1630372888.433000
 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/TTTdefs.vhd|
 !s107 C:/altera/14.1/tictactoe/TTTdefs.vhd|
 !i113 1
 R14
 R15
 Etwoinarow
-Z23 w1630085460
+Z23 w1630362307
 R2
 R5
 R6
@@ -129,26 +129,26 @@ VPLS<d@EFiPYNEhDz[Y7d_3
 !s100 LU<UCzG0U=fJP=L8;5mlk2
 R9
 31
-R10
+R19
 !i10b 1
-Z26 !s108 1630359039.202000
+Z26 !s108 1630372888.959000
 Z27 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/TwoInARow.vhd|
 Z28 !s107 C:/altera/14.1/tictactoe/TwoInARow.vhd|
 !i113 1
 R14
 R15
-Abehavioral
+Atwoinarow_arch
 R2
 R5
 R6
 DEx4 work 9 twoinarow 0 22 PLS<d@EFiPYNEhDz[Y7d_3
 l58
 L11
-Voko`]@4?aY6m^M8UIH`5^1
-!s100 Z3b5MMZ]do501Ckb7BCR_3
+V?14z5lAYZD]eS3gz]SbJG1
+!s100 L^6VhVJYLgH<2EHnL@UVb0
 R9
 31
-R10
+R19
 !i10b 1
 R26
 R27

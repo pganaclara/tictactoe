@@ -10,7 +10,7 @@ end GETMOVE;
 
 architecture GETMOVE_arch of GETMOVE is
 
-component TwoInRow port ( 
+component TwoInARow port ( 
 			PLAYER: in Square;
          BOARD: in Grid;
          MOVE: out natural );
@@ -27,7 +27,7 @@ end component;
 signal WIN, BLK: natural;
 
 begin
-	U1: TwoInRow port map (PLAYER, BOARD, WIN);
-	U2: TwoInRow port map (PLAYER, BOARD, BLK);
+	U1: TwoInARow port map (PLAYER, BOARD, WIN);
+	U2: TwoInARow port map (PLAYER, BOARD, BLK);
 	U3: PICK port map (PLAYER, BOARD, WIN, BLK, MOVE);
 end GETMOVE_arch;

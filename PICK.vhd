@@ -22,16 +22,16 @@ begin
 	begin	
 		if WINMV /= 0 then MOVE <= WINMV;
 		elsif BLKMV /= 0 then MOVE <= BLKMV;
-		elsif empty_square(5) then MOVE <= 5;  
-		elsif empty_square(1) then MOVE <= 1; 
-		elsif empty_square(3) then MOVE <= 3;
-		elsif empty_square(7) then MOVE <= 7;  
-		elsif empty_square(9) then MOVE <= 9;
-		elsif empty_square(2) then MOVE <= 2;  
-		elsif empty_square(4) then MOVE <= 4;
-		elsif empty_square(6) then MOVE <= 6; 
-		elsif empty_square(8) then MOVE <= 8; 
-		else 				  				MOVE <= 0;
+		elsif empty_square(BOARD, 5) then MOVE <= 5;  
+		elsif empty_square(BOARD, 1) then MOVE <= 1; 
+		elsif empty_square(BOARD, 3) then MOVE <= 3;
+		elsif empty_square(BOARD, 7) then MOVE <= 7;  
+		elsif empty_square(BOARD, 9) then MOVE <= 9;
+		elsif empty_square(BOARD, 2) then MOVE <= 2;  
+		elsif empty_square(BOARD, 4) then MOVE <= 4;
+		elsif empty_square(BOARD, 6) then MOVE <= 6; 
+		elsif empty_square(BOARD, 8) then MOVE <= 8; 
+		else 										 MOVE <= 0;
 		end if;
 end process;
 end PICK_arch;

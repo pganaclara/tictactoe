@@ -1,5 +1,5 @@
 Flow report for tictactoe
-Mon Aug 30 19:33:05 2021
+Mon Aug 30 22:57:45 2021
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -41,24 +41,24 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Flow Failed - Mon Aug 30 19:33:05 2021     ;
+; Flow Status                        ; Successful - Mon Aug 30 22:57:45 2021      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; tictactoe                                  ;
 ; Top-level Entity Name              ; tictactoe                                  ;
 ; Family                             ; MAX 10                                     ;
 ; Device                             ; 10M50DCF672C7G                             ;
 ; Timing Models                      ; Preliminary                                ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
-; UFM blocks                         ; N/A until Partition Merge                  ;
-; ADC blocks                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 1 / 49,760 ( < 1 % )                       ;
+;     Total combinational functions  ; 1 / 49,760 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 0 / 49,760 ( 0 % )                         ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 66 / 500 ( 13 % )                          ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                      ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                            ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                              ;
+; ADC blocks                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -67,7 +67,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/30/2021 19:32:56 ;
+; Start date & time ; 08/30/2021 22:57:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; tictactoe           ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ agreement for further details.
 +--------------------------------------+-------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                               ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+-------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 180747811388555.163036277615836     ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 180747811388555.163037503911680     ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                  ; --            ; --          ; tb_tictactoe   ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_tictactoe                        ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR        ; C:\altera\14.1\tictactoe\simulation ; --            ; --          ; eda_simulation ;
@@ -97,29 +97,41 @@ agreement for further details.
 +--------------------------------------+-------------------------------------+---------------+-------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4785 MB             ; 00:00:21                           ;
-; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:21                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 4796 MB             ; 00:00:22                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 5650 MB             ; 00:00:09                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4685 MB             ; 00:00:00                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4841 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4665 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:19     ; --                      ; --                  ; 00:00:34                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Flow OS Summary                                                                   ;
-+----------------------+------------------+-----------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-B9T857S9  ; Windows 7 ; 6.2        ; x86_64         ;
-+----------------------+------------------+-----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; LAPTOP-B9T857S9  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-B9T857S9  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-B9T857S9  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-B9T857S9  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-B9T857S9  ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off tictactoe -c tictactoe
+quartus_fit --read_settings_files=off --write_settings_files=off tictactoe -c tictactoe
+quartus_asm --read_settings_files=off --write_settings_files=off tictactoe -c tictactoe
+quartus_sta tictactoe -c tictactoe
+quartus_eda --read_settings_files=off --write_settings_files=off tictactoe -c tictactoe
 
 
 

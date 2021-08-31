@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tictactoe
-Mon Aug 30 19:33:05 2021
+Mon Aug 30 22:57:28 2021
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -10,7 +10,24 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |tictactoe|board[9]
+  9. State Machine - |tictactoe|board[8]
+ 10. State Machine - |tictactoe|board[7]
+ 11. State Machine - |tictactoe|board[6]
+ 12. State Machine - |tictactoe|board[5]
+ 13. State Machine - |tictactoe|board[4]
+ 14. State Machine - |tictactoe|board[3]
+ 15. State Machine - |tictactoe|board[2]
+ 16. State Machine - |tictactoe|board[1]
+ 17. Registers Removed During Synthesis
+ 18. General Register Statistics
+ 19. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -37,22 +54,22 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Aug 30 19:33:05 2021          ;
+; Analysis & Synthesis Status        ; Successful - Mon Aug 30 22:57:28 2021      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; tictactoe                                  ;
 ; Top-level Entity Name              ; tictactoe                                  ;
 ; Family                             ; MAX 10                                     ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
-; UFM blocks                         ; N/A until Partition Merge                  ;
-; ADC blocks                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 66                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
+; UFM blocks                         ; 0                                          ;
+; ADC blocks                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -160,13 +177,267 @@ agreement for further details.
 +----------------------------+-------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                  ;
++----------------------------------+-----------------+-----------------+----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path           ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------+---------+
+; tictactoe.vhd                    ; yes             ; User VHDL File  ; C:/altera/14.1/tictactoe/tictactoe.vhd ;         ;
+; TTTdefs.vhd                      ; yes             ; User VHDL File  ; C:/altera/14.1/tictactoe/TTTdefs.vhd   ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+;                                             ;          ;
+; Total combinational functions               ; 0        ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 0        ;
+;     -- 3 input functions                    ; 0        ;
+;     -- <=2 input functions                  ; 0        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 0        ;
+;     -- arithmetic mode                      ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 0        ;
+;     -- Dedicated logic registers            ; 0        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 66       ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; YMOVE[4] ;
+; Maximum fan-out                             ; 1        ;
+; Total fan-out                               ; 66       ;
+; Average fan-out                             ; 0.50     ;
++---------------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                   ;
++----------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------+
+; |tictactoe                 ; 0 (0)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 66   ; 0            ; 0          ; |tictactoe          ; work         ;
++----------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |tictactoe|board[9]                       ;
++----------------+------------+------------+----------------+
+; Name           ; board[9].Y ; board[9].X ; board[9].EMPTY ;
++----------------+------------+------------+----------------+
+; board[9].EMPTY ; 0          ; 0          ; 0              ;
+; board[9].X     ; 0          ; 1          ; 1              ;
+; board[9].Y     ; 1          ; 0          ; 1              ;
++----------------+------------+------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |tictactoe|board[8]                       ;
++----------------+------------+------------+----------------+
+; Name           ; board[8].Y ; board[8].X ; board[8].EMPTY ;
++----------------+------------+------------+----------------+
+; board[8].EMPTY ; 0          ; 0          ; 0              ;
+; board[8].X     ; 0          ; 1          ; 1              ;
+; board[8].Y     ; 1          ; 0          ; 1              ;
++----------------+------------+------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |tictactoe|board[7]                       ;
++----------------+------------+------------+----------------+
+; Name           ; board[7].Y ; board[7].X ; board[7].EMPTY ;
++----------------+------------+------------+----------------+
+; board[7].EMPTY ; 0          ; 0          ; 0              ;
+; board[7].X     ; 0          ; 1          ; 1              ;
+; board[7].Y     ; 1          ; 0          ; 1              ;
++----------------+------------+------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |tictactoe|board[6]                       ;
++----------------+------------+------------+----------------+
+; Name           ; board[6].Y ; board[6].X ; board[6].EMPTY ;
++----------------+------------+------------+----------------+
+; board[6].EMPTY ; 0          ; 0          ; 0              ;
+; board[6].X     ; 0          ; 1          ; 1              ;
+; board[6].Y     ; 1          ; 0          ; 1              ;
++----------------+------------+------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |tictactoe|board[5]                       ;
++----------------+------------+------------+----------------+
+; Name           ; board[5].Y ; board[5].X ; board[5].EMPTY ;
++----------------+------------+------------+----------------+
+; board[5].EMPTY ; 0          ; 0          ; 0              ;
+; board[5].X     ; 0          ; 1          ; 1              ;
+; board[5].Y     ; 1          ; 0          ; 1              ;
++----------------+------------+------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |tictactoe|board[4]                       ;
++----------------+------------+------------+----------------+
+; Name           ; board[4].Y ; board[4].X ; board[4].EMPTY ;
++----------------+------------+------------+----------------+
+; board[4].EMPTY ; 0          ; 0          ; 0              ;
+; board[4].X     ; 0          ; 1          ; 1              ;
+; board[4].Y     ; 1          ; 0          ; 1              ;
++----------------+------------+------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |tictactoe|board[3]                       ;
++----------------+------------+------------+----------------+
+; Name           ; board[3].Y ; board[3].X ; board[3].EMPTY ;
++----------------+------------+------------+----------------+
+; board[3].EMPTY ; 0          ; 0          ; 0              ;
+; board[3].X     ; 0          ; 1          ; 1              ;
+; board[3].Y     ; 1          ; 0          ; 1              ;
++----------------+------------+------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |tictactoe|board[2]                       ;
++----------------+------------+------------+----------------+
+; Name           ; board[2].Y ; board[2].X ; board[2].EMPTY ;
++----------------+------------+------------+----------------+
+; board[2].EMPTY ; 0          ; 0          ; 0              ;
+; board[2].X     ; 0          ; 1          ; 1              ;
+; board[2].Y     ; 1          ; 0          ; 1              ;
++----------------+------------+------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |tictactoe|board[1]                       ;
++----------------+------------+------------+----------------+
+; Name           ; board[1].Y ; board[1].X ; board[1].EMPTY ;
++----------------+------------+------------+----------------+
+; board[1].EMPTY ; 0          ; 0          ; 0              ;
+; board[1].X     ; 0          ; 1          ; 1              ;
+; board[1].Y     ; 1          ; 0          ; 1              ;
++----------------+------------+------------+----------------+
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; DRAW~reg0                              ; Stuck at GND due to stuck port data_in ;
+; XWIN~reg0                              ; Stuck at GND due to stuck port data_in ;
+; state                                  ; Lost fanout                            ;
+; board[9].EMPTY                         ; Lost fanout                            ;
+; board[9].X                             ; Lost fanout                            ;
+; board[9].Y                             ; Lost fanout                            ;
+; board[8].EMPTY                         ; Lost fanout                            ;
+; board[8].X                             ; Lost fanout                            ;
+; board[8].Y                             ; Lost fanout                            ;
+; board[7].EMPTY                         ; Lost fanout                            ;
+; board[7].X                             ; Lost fanout                            ;
+; board[7].Y                             ; Lost fanout                            ;
+; board[6].EMPTY                         ; Lost fanout                            ;
+; board[6].X                             ; Lost fanout                            ;
+; board[6].Y                             ; Lost fanout                            ;
+; board[5].EMPTY                         ; Lost fanout                            ;
+; board[5].X                             ; Lost fanout                            ;
+; board[5].Y                             ; Lost fanout                            ;
+; board[4].EMPTY                         ; Lost fanout                            ;
+; board[4].X                             ; Lost fanout                            ;
+; board[4].Y                             ; Lost fanout                            ;
+; board[3].EMPTY                         ; Lost fanout                            ;
+; board[3].X                             ; Lost fanout                            ;
+; board[3].Y                             ; Lost fanout                            ;
+; board[2].EMPTY                         ; Lost fanout                            ;
+; board[2].X                             ; Lost fanout                            ;
+; board[2].Y                             ; Lost fanout                            ;
+; board[1].EMPTY                         ; Lost fanout                            ;
+; board[1].X                             ; Lost fanout                            ;
+; board[1].Y                             ; Lost fanout                            ;
+; Total Number of Removed Registers = 30 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |tictactoe|board           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |tictactoe|board           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |tictactoe|board           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |tictactoe|board           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |tictactoe|board           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |tictactoe|board           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |tictactoe|board           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |tictactoe|board           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |tictactoe|board           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 66                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Mon Aug 30 19:32:56 2021
+    Info: Processing started: Mon Aug 30 22:57:19 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tictactoe -c tictactoe
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file tictactoe.vhd
@@ -186,13 +457,86 @@ Info (12021): Found 2 design units, including 1 entities, in source file pick.vh
 Info (12021): Found 2 design units, including 1 entities, in source file getmove.vhd
     Info (12022): Found design unit 1: GETMOVE-GETMOVE_arch
     Info (12023): Found entity 1: GETMOVE
-Error (10517): VHDL type mismatch error at PICK.vhd(25): Grid type does not match integer literal File: C:/altera/14.1/tictactoe/PICK.vhd Line: 25
-Error (10346): VHDL error at PICK.vhd(25): formal port or parameter "i" must have actual or default value File: C:/altera/14.1/tictactoe/PICK.vhd Line: 25
-Error (10784): HDL error at PICK.vhd(16): see declaration for object "i" File: C:/altera/14.1/tictactoe/PICK.vhd Line: 16
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 3 errors, 0 warnings
-    Error: Peak virtual memory: 4785 megabytes
-    Error: Processing ended: Mon Aug 30 19:33:05 2021
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:21
+Info (12127): Elaborating entity "tictactoe" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at tictactoe.vhd(8): used implicit default value for signal "XMOVE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "XMOVE[0]" is stuck at GND
+    Warning (13410): Pin "XMOVE[1]" is stuck at GND
+    Warning (13410): Pin "XMOVE[2]" is stuck at GND
+    Warning (13410): Pin "XMOVE[3]" is stuck at GND
+    Warning (13410): Pin "XMOVE[4]" is stuck at GND
+    Warning (13410): Pin "XMOVE[5]" is stuck at GND
+    Warning (13410): Pin "XMOVE[6]" is stuck at GND
+    Warning (13410): Pin "XMOVE[7]" is stuck at GND
+    Warning (13410): Pin "XMOVE[8]" is stuck at GND
+    Warning (13410): Pin "XMOVE[9]" is stuck at GND
+    Warning (13410): Pin "XMOVE[10]" is stuck at GND
+    Warning (13410): Pin "XMOVE[11]" is stuck at GND
+    Warning (13410): Pin "XMOVE[12]" is stuck at GND
+    Warning (13410): Pin "XMOVE[13]" is stuck at GND
+    Warning (13410): Pin "XMOVE[14]" is stuck at GND
+    Warning (13410): Pin "XMOVE[15]" is stuck at GND
+    Warning (13410): Pin "XMOVE[16]" is stuck at GND
+    Warning (13410): Pin "XMOVE[17]" is stuck at GND
+    Warning (13410): Pin "XMOVE[18]" is stuck at GND
+    Warning (13410): Pin "XMOVE[19]" is stuck at GND
+    Warning (13410): Pin "XMOVE[20]" is stuck at GND
+    Warning (13410): Pin "XMOVE[21]" is stuck at GND
+    Warning (13410): Pin "XMOVE[22]" is stuck at GND
+    Warning (13410): Pin "XMOVE[23]" is stuck at GND
+    Warning (13410): Pin "XMOVE[24]" is stuck at GND
+    Warning (13410): Pin "XMOVE[25]" is stuck at GND
+    Warning (13410): Pin "XMOVE[26]" is stuck at GND
+    Warning (13410): Pin "XMOVE[27]" is stuck at GND
+    Warning (13410): Pin "XMOVE[28]" is stuck at GND
+    Warning (13410): Pin "XMOVE[29]" is stuck at GND
+    Warning (13410): Pin "XMOVE[30]" is stuck at GND
+    Warning (13410): Pin "XWIN" is stuck at GND
+    Warning (13410): Pin "DRAW" is stuck at GND
+Info (17049): 28 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 33 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "YMOVE[4]"
+    Warning (15610): No output dependent on input pin "YMOVE[5]"
+    Warning (15610): No output dependent on input pin "YMOVE[6]"
+    Warning (15610): No output dependent on input pin "YMOVE[7]"
+    Warning (15610): No output dependent on input pin "YMOVE[8]"
+    Warning (15610): No output dependent on input pin "YMOVE[9]"
+    Warning (15610): No output dependent on input pin "YMOVE[10]"
+    Warning (15610): No output dependent on input pin "YMOVE[11]"
+    Warning (15610): No output dependent on input pin "YMOVE[12]"
+    Warning (15610): No output dependent on input pin "YMOVE[13]"
+    Warning (15610): No output dependent on input pin "YMOVE[14]"
+    Warning (15610): No output dependent on input pin "YMOVE[15]"
+    Warning (15610): No output dependent on input pin "YMOVE[16]"
+    Warning (15610): No output dependent on input pin "YMOVE[17]"
+    Warning (15610): No output dependent on input pin "YMOVE[18]"
+    Warning (15610): No output dependent on input pin "YMOVE[19]"
+    Warning (15610): No output dependent on input pin "YMOVE[20]"
+    Warning (15610): No output dependent on input pin "YMOVE[21]"
+    Warning (15610): No output dependent on input pin "YMOVE[22]"
+    Warning (15610): No output dependent on input pin "YMOVE[23]"
+    Warning (15610): No output dependent on input pin "YMOVE[24]"
+    Warning (15610): No output dependent on input pin "YMOVE[25]"
+    Warning (15610): No output dependent on input pin "YMOVE[26]"
+    Warning (15610): No output dependent on input pin "YMOVE[27]"
+    Warning (15610): No output dependent on input pin "YMOVE[28]"
+    Warning (15610): No output dependent on input pin "YMOVE[29]"
+    Warning (15610): No output dependent on input pin "YMOVE[30]"
+    Warning (15610): No output dependent on input pin "YMOVE[3]"
+    Warning (15610): No output dependent on input pin "YMOVE[2]"
+    Warning (15610): No output dependent on input pin "YMOVE[1]"
+    Warning (15610): No output dependent on input pin "YMOVE[0]"
+    Warning (15610): No output dependent on input pin "RESET"
+    Warning (15610): No output dependent on input pin "CLK"
+Info (21057): Implemented 66 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 33 input pins
+    Info (21059): Implemented 33 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 69 warnings
+    Info: Peak virtual memory: 4796 megabytes
+    Info: Processing ended: Mon Aug 30 22:57:28 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
 
 
