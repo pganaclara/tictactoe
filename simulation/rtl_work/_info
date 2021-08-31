@@ -8,95 +8,179 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/altera/14.1/tictactoe/simulation
-Etb_tictactoe
-Z1 w1630369092
+Egetmove
+Z1 w1630445648
 Z2 DPx4 work 7 tttdefs 0 22 Aem^GR:hY_^b8Lf_<k]AP0
-Z3 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
-Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z7 8C:/altera/14.1/tictactoe/tb_tictactoe.vhd
-Z8 FC:/altera/14.1/tictactoe/tb_tictactoe.vhd
+Z5 8C:/altera/14.1/tictactoe/GETMOVE.vhd
+Z6 FC:/altera/14.1/tictactoe/GETMOVE.vhd
+l0
+L5
+VZGT9gBQibnkGDz><NJHeR3
+!s100 Rl6^Zf5=zhmM]aQg6BZ5_3
+Z7 OV;C;10.3c;59
+31
+Z8 !s110 1630446931
+!i10b 1
+Z9 !s108 1630446931.611000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/GETMOVE.vhd|
+Z11 !s107 C:/altera/14.1/tictactoe/GETMOVE.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1
+Agetmove_arch
+R2
+R3
+R4
+DEx4 work 7 getmove 0 22 ZGT9gBQibnkGDz><NJHeR3
+l30
+L11
+VSi3:0dYkUNDR7V7Kg?`RB2
+!s100 9dT61L4AggE8KEzneQJfg1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Epick
+Z14 w1630444622
+R2
+Z15 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R3
+R4
+R0
+Z16 8C:/altera/14.1/tictactoe/PICK.vhd
+Z17 FC:/altera/14.1/tictactoe/PICK.vhd
+l0
+L6
+VmCGM7cfRUbQZ`jYOfFX]40
+!s100 mAWU^=VT=PZRjzdnE^NZK2
+R7
+31
+R8
+!i10b 1
+Z18 !s108 1630446931.209000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/PICK.vhd|
+Z20 !s107 C:/altera/14.1/tictactoe/PICK.vhd|
+!i113 1
+R12
+R13
+Apick_arch
+R2
+R15
+R3
+R4
+DEx4 work 4 pick 0 22 mCGM7cfRUbQZ`jYOfFX]40
+l20
+L15
+V>V@;?YdmNW_J;ER7[LXZ81
+!s100 87mJY`GOVEnM:3XLYOGVl0
+R7
+31
+R8
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Etb_tictactoe
+Z21 w1630446614
+R2
+Z22 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R15
+R3
+R4
+R0
+Z23 8C:/altera/14.1/tictactoe/tb_tictactoe.vhd
+Z24 FC:/altera/14.1/tictactoe/tb_tictactoe.vhd
 l0
 L8
 VHFEbX8=abe8VMdW;0J_[=0
 !s100 V0]1c7>>>m?=mdOW=FYeN2
-Z9 OV;C;10.3c;59
+R7
 31
-Z10 !s110 1630372889
+Z25 !s110 1630446932
 !i10b 1
-Z11 !s108 1630372889.360000
-Z12 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/tb_tictactoe.vhd|
-Z13 !s107 C:/altera/14.1/tictactoe/tb_tictactoe.vhd|
+Z26 !s108 1630446932.002000
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/tb_tictactoe.vhd|
+Z28 !s107 C:/altera/14.1/tictactoe/tb_tictactoe.vhd|
 !i113 1
-Z14 o-93 -work work
-Z15 tExplicit 1
+R12
+R13
 Ateste
+R2
+R22
+R15
+R3
+R4
+DEx4 work 12 tb_tictactoe 0 22 HFEbX8=abe8VMdW;0J_[=0
+l46
+L11
+Vg9SSfD3T`G`]X6XPm4PQh1
+!s100 FXzJXaO6km7324KZnmO5C2
+R7
+31
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R12
+R13
+Etictactoe
+Z29 w1630445560
 R2
 R3
 R4
-R5
-R6
-DEx4 work 12 tb_tictactoe 0 22 HFEbX8=abe8VMdW;0J_[=0
-l43
-L11
-VcE>N6f7LzGoW47>L7hbKe1
-!s100 6QmR<Q<7WA31GZ6S9hM331
-R9
-31
-R10
-!i10b 1
-R11
-R12
-R13
-!i113 1
-R14
-R15
-Etictactoe
-Z16 w1630372819
-R2
-R5
-R6
 R0
-Z17 8C:/altera/14.1/tictactoe/tictactoe.vhd
-Z18 FC:/altera/14.1/tictactoe/tictactoe.vhd
+Z30 8C:/altera/14.1/tictactoe/tictactoe.vhd
+Z31 FC:/altera/14.1/tictactoe/tictactoe.vhd
 l0
 L5
-V[_@zdNJcDP<iRcN90N5`I1
-!s100 SkZS2DO2Y^53<2MNMe6[@1
-R9
+V1Q[Lz[Vl6<efA`RWeDi[@0
+!s100 ;=H=6F?:gkD^XJXo^cXkK0
+R7
 31
-Z19 !s110 1630372888
+Z32 !s110 1630446930
 !i10b 1
-Z20 !s108 1630372888.519000
-Z21 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/tictactoe.vhd|
-Z22 !s107 C:/altera/14.1/tictactoe/tictactoe.vhd|
+Z33 !s108 1630446930.437000
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/tictactoe.vhd|
+Z35 !s107 C:/altera/14.1/tictactoe/tictactoe.vhd|
 !i113 1
-R14
-R15
+R12
+R13
 Abehavioral
 R2
-R5
-R6
-DEx4 work 9 tictactoe 0 22 [_@zdNJcDP<iRcN90N5`I1
-l28
-L15
-VVXDZ5]Ql4E=]gY@C:zgkc1
-!s100 XHRJj[X>jXaPBaePERO=k0
-R9
+R3
+R4
+DEx4 work 9 tictactoe 0 22 1Q[Lz[Vl6<efA`RWeDi[@0
+l79
+L17
+V_E96:=>ooRGN@NAU@YkRN0
+!s100 0Nm3?`DCTi[I17EdAf9_G0
+R7
 31
-R19
+R32
 !i10b 1
-R20
-R21
-R22
+R33
+R34
+R35
 !i113 1
-R14
-R15
+R12
+R13
 Ptttdefs
-R5
-R6
+R3
+R4
 w1629925898
 R0
 8C:/altera/14.1/tictactoe/TTTdefs.vhd
@@ -105,54 +189,54 @@ l0
 L4
 VAem^GR:hY_^b8Lf_<k]AP0
 !s100 D0Vd:6a]an_CnIo@kPSkZ3
-R9
+R7
 31
-R19
+R32
 !i10b 1
-!s108 1630372888.433000
+!s108 1630446930.373000
 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/TTTdefs.vhd|
 !s107 C:/altera/14.1/tictactoe/TTTdefs.vhd|
 !i113 1
-R14
-R15
+R12
+R13
 Etwoinarow
-Z23 w1630362307
+Z36 w1630362307
 R2
-R5
-R6
+R3
+R4
 R0
-Z24 8C:/altera/14.1/tictactoe/TwoInARow.vhd
-Z25 FC:/altera/14.1/tictactoe/TwoInARow.vhd
+Z37 8C:/altera/14.1/tictactoe/TwoInARow.vhd
+Z38 FC:/altera/14.1/tictactoe/TwoInARow.vhd
 l0
 L5
 VPLS<d@EFiPYNEhDz[Y7d_3
 !s100 LU<UCzG0U=fJP=L8;5mlk2
-R9
+R7
 31
-R19
+R32
 !i10b 1
-Z26 !s108 1630372888.959000
-Z27 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/TwoInARow.vhd|
-Z28 !s107 C:/altera/14.1/tictactoe/TwoInARow.vhd|
+Z39 !s108 1630446930.820000
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/TwoInARow.vhd|
+Z41 !s107 C:/altera/14.1/tictactoe/TwoInARow.vhd|
 !i113 1
-R14
-R15
+R12
+R13
 Atwoinarow_arch
 R2
-R5
-R6
+R3
+R4
 DEx4 work 9 twoinarow 0 22 PLS<d@EFiPYNEhDz[Y7d_3
 l58
 L11
 V?14z5lAYZD]eS3gz]SbJG1
 !s100 L^6VhVJYLgH<2EHnL@UVb0
-R9
+R7
 31
-R19
+R32
 !i10b 1
-R26
-R27
-R28
+R39
+R40
+R41
 !i113 1
-R14
-R15
+R12
+R13

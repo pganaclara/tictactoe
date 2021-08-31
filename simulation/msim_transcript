@@ -1,4 +1,5 @@
 # Reading C:/altera/14.1/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
 # do tictactoe_run_msim_rtl_vhdl.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -14,17 +15,17 @@
 # 
 # vcom -93 -work work {C:/altera/14.1/tictactoe/TTTdefs.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 22:21:28 on Aug 30,2021
+# Start time: 18:55:30 on Aug 31,2021
 # vcom -reportprogress 300 -93 -work work C:/altera/14.1/tictactoe/TTTdefs.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package TTTdefs
-# End time: 22:21:28 on Aug 30,2021, Elapsed time: 0:00:00
+# End time: 18:55:30 on Aug 31,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/altera/14.1/tictactoe/tictactoe.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 22:21:28 on Aug 30,2021
+# Start time: 18:55:30 on Aug 31,2021
 # vcom -reportprogress 300 -93 -work work C:/altera/14.1/tictactoe/tictactoe.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -32,11 +33,11 @@
 # -- Loading package TTTdefs
 # -- Compiling entity tictactoe
 # -- Compiling architecture behavioral of tictactoe
-# End time: 22:21:28 on Aug 30,2021, Elapsed time: 0:00:00
+# End time: 18:55:30 on Aug 31,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/altera/14.1/tictactoe/TwoInARow.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 22:21:28 on Aug 30,2021
+# Start time: 18:55:30 on Aug 31,2021
 # vcom -reportprogress 300 -93 -work work C:/altera/14.1/tictactoe/TwoInARow.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -44,12 +45,37 @@
 # -- Loading package TTTdefs
 # -- Compiling entity TwoInARow
 # -- Compiling architecture TwoInARow_arch of TwoInARow
-# End time: 22:21:29 on Aug 30,2021, Elapsed time: 0:00:01
+# End time: 18:55:31 on Aug 31,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/altera/14.1/tictactoe/PICK.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 18:55:31 on Aug 31,2021
+# vcom -reportprogress 300 -93 -work work C:/altera/14.1/tictactoe/PICK.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package TTTdefs
+# -- Compiling entity PICK
+# -- Compiling architecture PICK_arch of PICK
+# End time: 18:55:31 on Aug 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/altera/14.1/tictactoe/GETMOVE.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 18:55:31 on Aug 31,2021
+# vcom -reportprogress 300 -93 -work work C:/altera/14.1/tictactoe/GETMOVE.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package TTTdefs
+# -- Compiling entity GETMOVE
+# -- Compiling architecture GETMOVE_arch of GETMOVE
+# End time: 18:55:31 on Aug 31,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/altera/14.1/tictactoe/tb_tictactoe.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 22:21:29 on Aug 30,2021
+# Start time: 18:55:31 on Aug 31,2021
 # vcom -reportprogress 300 -93 -work work C:/altera/14.1/tictactoe/tb_tictactoe.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -59,12 +85,12 @@
 # -- Loading package TTTdefs
 # -- Compiling entity tb_tictactoe
 # -- Compiling architecture teste of tb_tictactoe
-# End time: 22:21:29 on Aug 30,2021, Elapsed time: 0:00:00
+# End time: 18:55:32 on Aug 31,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_tictactoe
 # vsim -gui "+altera" -l msim_transcript -do "tictactoe_run_msim_rtl_vhdl.do" 
-# Start time: 22:21:29 on Aug 30,2021
+# Start time: 18:55:32 on Aug 31,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -72,27 +98,32 @@
 # Loading ieee.std_logic_textio(body)
 # Loading work.tttdefs
 # Loading work.tb_tictactoe(teste)
-# ** Error: (vsim-7) Failed to open VHDL file "data_in.txt" in rb mode.
-# 
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Instance: /tb_tictactoe File: C:/altera/14.1/tictactoe/tb_tictactoe.vhd
 # Loading work.tictactoe(behavioral)
+# Loading work.getmove(getmove_arch)
 # Loading work.twoinarow(twoinarow_arch)
+# Loading work.pick(pick_arch)
 # 
 # add wave *
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Fatal: (vsim-7) Failed to open VHDL file "data_in.txt" in rb mode.
-# 
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Process: /tb_tictactoe/read_inputs_data_in File: C:/altera/14.1/tictactoe/tb_tictactoe.vhd
-# Fatal error in Process read_inputs_data_in at C:/altera/14.1/tictactoe/tb_tictactoe.vhd line 81
-# 
-# HDL call sequence:
-# Stopped at C:/altera/14.1/tictactoe/tb_tictactoe.vhd 81 Process read_inputs_data_in
-# 
-# End time: 22:22:01 on Aug 30,2021, Elapsed time: 0:00:32
-# Errors: 3, Warnings: 0
+# run 300 ns
+# ** Note: RESET
+#    Time: 15 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: RESET
+#    Time: 35 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: RESET
+#    Time: 55 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: RESET
+#    Time: 75 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: Tabuleiro: 
+#    Time: 115 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note:    y | empty | empty
+#    Time: 115 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note:    empty | empty | empty
+#    Time: 115 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note:    empty | empty | empty
+#    Time: 115 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# End time: 18:58:10 on Aug 31,2021, Elapsed time: 0:02:38
+# Errors: 0, Warnings: 0

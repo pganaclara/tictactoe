@@ -12,6 +12,7 @@ architecture teste of tb_tictactoe is
 
 component tictactoe is
   port( CLK: in std_logic;
+  		  FLAG: in std_logic;
         YMOVE: in natural;
         XMOVE: out natural;
         XWIN: out std_logic;
@@ -23,8 +24,8 @@ end component;
 
 signal data_in          : natural;
 signal data_output      : natural;
-signal clk					: std_logic := '0';
-signal rst					: std_logic := '0';
+signal clk					: std_logic;
+signal rst					: std_logic;
 signal xwin					: std_logic;
 signal ywin					: std_logic;
 signal draw					: std_logic;
@@ -44,7 +45,7 @@ constant OFFSET     : time := 5 ns;
 
 begin
 -- Instantiate the Unit Under Test (UUT) or Design Under Test (DUT)
-UUT: tictactoe port map(CLK => clk,YMOVE => data_in, XMOVE => data_output, XWIN => xwin,YWIN => ywin, DRAW => draw, RESET => rst);
+UUT: tictactoe port map(CLK => clk, FLAG => flag_write, YMOVE => data_in, XMOVE => data_output, XWIN => xwin,YWIN => ywin, DRAW => draw, RESET => rst);
 
 ------------------------------------------------------------------------------------
 ----------------- processo para gerar o sinal de clock 
@@ -128,12 +129,24 @@ read_inputs_data_in:process
 	write_outputs:process
 		variable linea  : line;
 		variable output : natural;
+		constant x_ganha : string := "O Computador Venceu";
+		constant y_ganha : string := "O Jogador Venceu";
+		constant empate : string := "Empate";
+		constant erro : string := "Erro";
 	begin
 		while true loop
 			if (flag_write ='1')then
 				output := data_output;
 				write(linea,output);
 				writeline(outputs,linea);
+				
+				if (xwin = '1') then
+					write(linea, x_ganha);
+				elsif (ywin = '1') then
+					write(linea, y_ganha);
+				elsif (draw = '1') then
+					write(linea, empate);
+				end if;
 			end if;
 			wait for PERIOD;
 		end loop; 

@@ -25,9 +25,12 @@ component PICK port (
 end component;
 
 signal WIN, BLK: natural;
+signal PCMOVE: natural;
 
 begin
-	U1: TwoInARow port map (PLAYER, BOARD, WIN);
-	U2: TwoInARow port map (PLAYER, BOARD, BLK);
-	U3: PICK port map (PLAYER, BOARD, WIN, BLK, MOVE);
+	U1: TwoInARow port map (PLAYER => X, BOARD => board, MOVE => WIN);
+	U2: TwoInARow port map (PLAYER => Y, BOARD => board, MOVE => BLK);
+	U3: PICK port map (PLAYER => X, BOARD => board, WINMV => WIN, BLKMV => BLK, MOVE => PCMOVE);
+	
+	MOVE <= PCMOVE;
 end GETMOVE_arch;

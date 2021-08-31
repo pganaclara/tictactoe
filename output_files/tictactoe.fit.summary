@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Aug 31 12:00:08 2021
+Fitter Status : Successful - Tue Aug 31 18:57:49 2021
 Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Web Edition
 Revision Name : tictactoe
 Top-level Entity Name : tictactoe
 Family : MAX 10
 Device : 10M50DCF672C7G
 Timing Models : Preliminary
-Total logic elements : 1 / 49,760 ( < 1 % )
-    Total combinational functions : 1 / 49,760 ( < 1 % )
-    Dedicated logic registers : 0 / 49,760 ( 0 % )
-Total registers : 0
-Total pins : 66 / 500 ( 13 % )
+Total logic elements : 233 / 49,760 ( < 1 % )
+    Total combinational functions : 231 / 49,760 ( < 1 % )
+    Dedicated logic registers : 32 / 49,760 ( < 1 % )
+Total registers : 32
+Total pins : 68 / 500 ( 14 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

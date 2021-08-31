@@ -4,28 +4,44 @@ use work.TTTdefs.all;
 
 entity tictactoe is
   port( CLK: in std_logic;
+		  FLAG: in std_logic;
         YMOVE: in natural;
         XMOVE: out natural;
         XWIN: out std_logic;
 		  YWIN: out std_logic;
         DRAW: out std_logic;
-        RESET: std_logic
+        RESET: in std_logic
   );
 end tictactoe;
 
 architecture behavioral of tictactoe is
-  component TwoInARow is
-    port ( PLAYER: in Square;
-           BOARD: in Grid;
-           MOVE: out natural );
-  end component;
+--  component TwoInARow is
+--    port ( PLAYER: in Square;
+--           BOARD: in Grid;
+--           MOVE: out natural );
+--  end component;
+--  
+--  component PICK is 
+--	port (
+--			PLAYER: in Square;
+--         BOARD: in Grid;
+--			WINMV, BLKMV: in natural;
+--         MOVE: out natural);
+--	end component;
+
+component GETMOVE is
+  port ( PLAYER: in Square;
+         BOARD: in Grid;
+         MOVE: out natural );
+end component;
 
   type STATE_TYPE is (YMOVING, XMOVING);
   signal state: STATE_TYPE := YMOVING;
   signal board: Grid := (others => EMPTY);
+  signal PCMOVE: natural;
 
   
-function winplayer(B: Grid) return std_logic is
+function winpc(B: Grid) return std_logic is
 	begin
 	 if    B(1)= X and B(2)= X and B(3)= X then return '1';
     elsif B(4)= X and B(5)= X and B(6)= X then return '1';
@@ -37,9 +53,9 @@ function winplayer(B: Grid) return std_logic is
     elsif B(7)= X and B(5)= X and B(3)= X then return '1';
     else return '0';
 	 end if;
-	end winplayer;
+	end winpc;
 	
-function winpc(B: Grid) return std_logic is
+function winplayer(B: Grid) return std_logic is
 	begin
 	 if    B(1)= Y and B(2)= Y and B(3)= Y then return '1';
     elsif B(4)= Y and B(5)= Y and B(6)= Y then return '1';
@@ -51,7 +67,7 @@ function winpc(B: Grid) return std_logic is
     elsif B(7)= Y and B(5)= Y and B(3)= Y then return '1';
     else return '0';
     end if;
-	end winpc;
+	end winplayer;
 	
 function old(B: Grid) return std_logic is
 	begin
@@ -61,6 +77,7 @@ function old(B: Grid) return std_logic is
 	end old;		
 	
 begin
+U4: GETMOVE port map (PLAYER => X, BOARD => board, MOVE => PCMOVE);
   process(CLK)
   begin
     if (rising_edge(CLK)) then
@@ -70,6 +87,7 @@ begin
         DRAW <= '0'; XWIN <= '0';
       end if;
 
+		if (FLAG = '1') then
       case state is
         when YMOVING =>
           -- Y faz o movimento (o jogador)
@@ -78,29 +96,34 @@ begin
             else
               board(YMOVE) <= Y;        -- Se a casa estiver vazia, o jogador pode fazer o movimento.
               state <= XMOVING;
-          end if;
+				end if;
 
         when XMOVING => -- imprime o tabuleiro
 			report "Tabuleiro: ";
 			report "   " & Square'image(board(1)) & " | " & Square'image(board(2)) & " | " & Square'image(board(3));
 			report "   " & Square'image(board(4)) & " | " & Square'image(board(5)) & " | " & Square'image(board(6));
 			report "   " & Square'image(board(7)) & " | " & Square'image(board(8)) & " | " & Square'image(board(9));
+			
+			 XMOVE <= PCMOVE;
+			 board(PCMOVE) <= X;
           state <= YMOVING;
-			 
-		-- lógica de ganha ou empata do PICK.vhd
-		
+					
+			when others =>
+				DRAW <= '0'; XWIN <= '0';
+				
       end case;
+		end if;
     end if;
-	 if winplayer(BOARD) = '1' then
+	 if winpc(BOARD) = '1' then
 		XWIN <= '1';
 		YWIN <= '0';
 		DRAW <= '0';
-		report "PLAYER WINS";
-	 elsif winpc(BOARD) = '1' then
+		report "PC WINS";
+	 elsif winplayer(BOARD) = '1' then
 		YWIN <= '1';
 		XWIN <= '0';
 		DRAW <= '0';
-		report "PC WINS";
+		report "PLAYER WINS";
     elsif winpc(BOARD) = '0' and winplayer(BOARD) = '0' and old(BOARD) = '1' then
 		DRAW <= '1';
 		YWIN <= '0';
