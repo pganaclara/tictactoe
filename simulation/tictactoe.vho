@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 14.1.0 Build 186 12/03/2014 SJ Web Edition"
 
--- DATE "08/30/2021 22:57:45"
+-- DATE "08/31/2021 12:00:23"
 
 -- 
 -- Device: Altera 10M50DCF672C7G Package FBGA672
@@ -29,19 +29,16 @@
 
 LIBRARY FIFTYFIVENM;
 LIBRARY IEEE;
-LIBRARY STD;
 USE FIFTYFIVENM.FIFTYFIVENM_COMPONENTS.ALL;
 USE IEEE.STD_LOGIC_1164.ALL;
-USE IEEE.STD_LOGIC_ARITH.ALL;
-USE STD.STANDARD.ALL;
 
 ENTITY 	tictactoe IS
     PORT (
 	CLK : IN std_logic;
-	YMOVE : IN STD.STANDARD.natural;
-	XMOVE : OUT STD.STANDARD.natural;
-	XWIN : OUT std_logic;
-	DRAW : OUT std_logic;
+	YMOVE : IN std_logic_vector(30 DOWNTO 0);
+	XMOVE : BUFFER std_logic_vector(30 DOWNTO 0);
+	XWIN : BUFFER std_logic;
+	DRAW : BUFFER std_logic;
 	RESET : IN std_logic
 	);
 END tictactoe;
@@ -207,8 +204,8 @@ SIGNAL \DRAW~output_o\ : std_logic;
 BEGIN
 
 ww_CLK <= CLK;
-ww_YMOVE <= IEEE.STD_LOGIC_ARITH.CONV_STD_LOGIC_VECTOR(YMOVE, 31);
-XMOVE <= IEEE.STD_LOGIC_ARITH.CONV_INTEGER(UNSIGNED(ww_XMOVE));
+ww_YMOVE <= YMOVE;
+XMOVE <= ww_XMOVE;
 XWIN <= ww_XWIN;
 DRAW <= ww_DRAW;
 ww_RESET <= RESET;

@@ -8,7 +8,7 @@ entity tictactoe is
         XMOVE: out natural;
         XWIN: out std_logic;
         DRAW: out std_logic;
-        RESET: std_logic
+        RESET: in std_logic
   );
 end tictactoe;
 
