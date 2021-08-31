@@ -7,8 +7,9 @@ entity tictactoe is
         YMOVE: in natural;
         XMOVE: out natural;
         XWIN: out std_logic;
+		  YWIN: out std_logic;
         DRAW: out std_logic;
-        RESET: in std_logic
+        RESET: std_logic
   );
 end tictactoe;
 
@@ -23,6 +24,42 @@ architecture behavioral of tictactoe is
   signal state: STATE_TYPE := YMOVING;
   signal board: Grid := (others => EMPTY);
 
+  
+function winplayer(B: Grid) return std_logic is
+	begin
+	 if    B(1)= X and B(2)= X and B(3)= X then return '1';
+    elsif B(4)= X and B(5)= X and B(6)= X then return '1';
+    elsif B(7)= X and B(8)= X and B(9)= X then return '1';
+	 elsif B(1)= X and B(4)= X and B(7)= X then return '1';
+    elsif B(2)= X and B(5)= X and B(8)= X then return '1';
+    elsif B(3)= X and B(6)= X and B(9)= X then return '1';
+	 elsif B(5)= X and B(9)= X and B(1)= X then return '1';
+    elsif B(7)= X and B(5)= X and B(3)= X then return '1';
+    else return '0';
+	 end if;
+	end winplayer;
+	
+function winpc(B: Grid) return std_logic is
+	begin
+	 if    B(1)= Y and B(2)= Y and B(3)= Y then return '1';
+    elsif B(4)= Y and B(5)= Y and B(6)= Y then return '1';
+    elsif B(7)= Y and B(8)= Y and B(9)= Y then return '1';
+	 elsif B(1)= Y and B(4)= Y and B(7)= Y then return '1';
+    elsif B(2)= Y and B(5)= Y and B(8)= Y then return '1';
+    elsif B(3)= Y and B(6)= Y and B(9)= Y then return '1';
+	 elsif B(5)= Y and B(9)= Y and B(1)= Y then return '1';
+    elsif B(7)= Y and B(5)= Y and B(3)= Y then return '1';
+    else return '0';
+    end if;
+	end winpc;
+	
+function old(B: Grid) return std_logic is
+	begin
+	 if    B(1) /= EMPTY and B(2)/= EMPTY and B(3) /= EMPTY and B(4)/= EMPTY and B(5)/= EMPTY and B(6)/= EMPTY and B(7)/= EMPTY and B(8)/= EMPTY and B(9)/= EMPTY then return '1';
+    else return '0';
+    end if;
+	end old;		
+	
 begin
   process(CLK)
   begin
@@ -54,6 +91,26 @@ begin
 		
       end case;
     end if;
+	 if winplayer(BOARD) = '1' then
+		XWIN <= '1';
+		YWIN <= '0';
+		DRAW <= '0';
+		report "PLAYER WINS";
+	 elsif winpc(BOARD) = '1' then
+		YWIN <= '1';
+		XWIN <= '0';
+		DRAW <= '0';
+		report "PC WINS";
+    elsif winpc(BOARD) = '0' and winplayer(BOARD) = '0' and old(BOARD) = '1' then
+		DRAW <= '1';
+		YWIN <= '0';
+		XWIN <= '0';
+		report "TIC TAC TOE";
+	 else
+		DRAW <= '0';
+		YWIN <= '0';
+		XWIN <= '0';
+	 end if;
   end process;
 
 end behavioral;

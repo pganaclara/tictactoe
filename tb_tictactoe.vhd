@@ -15,6 +15,7 @@ component tictactoe is
         YMOVE: in natural;
         XMOVE: out natural;
         XWIN: out std_logic;
+		  YWIN: out std_logic;
         DRAW: out std_logic;
         RESET: in std_logic
   );
@@ -25,6 +26,7 @@ signal data_output      : natural;
 signal clk					: std_logic := '0';
 signal rst					: std_logic := '0';
 signal xwin					: std_logic;
+signal ywin					: std_logic;
 signal draw					: std_logic;
 constant max_value      : natural := 4;
 constant mim_value		: natural := 1;
@@ -42,7 +44,7 @@ constant OFFSET     : time := 5 ns;
 
 begin
 -- Instantiate the Unit Under Test (UUT) or Design Under Test (DUT)
-UUT: tictactoe port map(CLK => clk,YMOVE => data_in, XMOVE => data_output, XWIN => xwin, DRAW => draw, RESET => rst);
+UUT: tictactoe port map(CLK => clk,YMOVE => data_in, XMOVE => data_output, XWIN => xwin,YWIN => ywin, DRAW => draw, RESET => rst);
 
 ------------------------------------------------------------------------------------
 ----------------- processo para gerar o sinal de clock 
