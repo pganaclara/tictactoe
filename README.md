@@ -15,7 +15,7 @@ File                                 | Overall function
 [tictactoe.vhd](tictactoe.vhd)       | Definition of game logic, including win, lost and draw and change of player
 [tb_tictactoe.vhd](tb_tictactoe.vhd) | Test bench including the reading of data_in.txt and writing of saida.txt
 
-#Group
+# Group
 <table>
   <tr>
     <td align="center"><a href="https://github.com/pganaclara"><img style="border-radius: 50%;" src="https://github.com/pganaclara.png" width="100px;" alt=""/><br /><sub><b>Ana Gonçalves</b></sub></a><br />
