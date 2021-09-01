@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for tictactoe
-Tue Aug 31 18:57:56 2021
+Wed Sep 01 15:11:27 2021
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -788,7 +788,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Tue Aug 31 18:57:53 2021
+    Info: Processing started: Wed Sep 01 15:11:24 2021
 Info: Command: quartus_sta tictactoe -c tictactoe
 Info: qsta_default_script.tcl version: #3
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
@@ -861,8 +861,8 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Tue Aug 31 18:57:56 2021
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Wed Sep 01 15:11:27 2021
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

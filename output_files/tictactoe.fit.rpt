@@ -1,5 +1,5 @@
 Fitter report for tictactoe
-Tue Aug 31 18:57:49 2021
+Wed Sep 01 15:11:20 2021
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -67,7 +67,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Tue Aug 31 18:57:49 2021      ;
+; Fitter Status                      ; Successful - Wed Sep 01 15:11:20 2021      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; tictactoe                                  ;
 ; Top-level Entity Name              ; tictactoe                                  ;
@@ -2137,14 +2137,14 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.23 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DCF672C7G are preliminary
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DCF672C7G are preliminary
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (14579): Pin YMOVE[10] uses I/O standard 2.5 V located at B2 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
 Warning (14579): Pin YMOVE[12] uses I/O standard 2.5 V located at J7 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
 Warning (14579): Pin YMOVE[17] uses I/O standard 2.5 V located at B10 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
@@ -2157,9 +2157,9 @@ Warning (14579): Pin XMOVE[24] uses I/O standard 2.5 V located at B7 will have l
 Warning (14579): Pin XWIN uses I/O standard 2.5 V located at N11 will have lower speed performance due to its location.  Refer to the product datasheet for the supported I/O speed.
 Info (144001): Generated suppressed messages file C:/altera/14.1/tictactoe/output_files/tictactoe.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 5679 megabytes
-    Info: Processing ended: Tue Aug 31 18:57:49 2021
-    Info: Elapsed time: 00:00:16
+    Info: Peak virtual memory: 5680 megabytes
+    Info: Processing ended: Wed Sep 01 15:11:20 2021
+    Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:21
 
 

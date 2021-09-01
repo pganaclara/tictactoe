@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 14.1.0 Build 186 12/03/2014 SJ Web Edition"
 
--- DATE "08/31/2021 18:57:58"
+-- DATE "09/01/2021 15:11:30"
 
 -- 
 -- Device: Altera 10M50DCF672C7G Package FBGA672

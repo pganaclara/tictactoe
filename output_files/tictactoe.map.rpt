@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tictactoe
-Tue Aug 31 18:57:31 2021
+Wed Sep 01 15:11:03 2021
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -59,7 +59,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Aug 31 18:57:31 2021      ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep 01 15:11:03 2021      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; tictactoe                                  ;
 ; Top-level Entity Name              ; tictactoe                                  ;
@@ -512,7 +512,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -522,7 +522,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Tue Aug 31 18:57:20 2021
+    Info: Processing started: Wed Sep 01 15:10:51 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tictactoe -c tictactoe
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file tictactoe.vhd
@@ -614,8 +614,8 @@ Info (21057): Implemented 311 device resources after synthesis - the final resou
     Info (21061): Implemented 243 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 59 warnings
     Info: Peak virtual memory: 4801 megabytes
-    Info: Processing ended: Tue Aug 31 18:57:31 2021
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Processing ended: Wed Sep 01 15:11:03 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:27
 
 

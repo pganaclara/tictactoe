@@ -29,7 +29,7 @@ signal rst					: std_logic;
 signal xwin					: std_logic;
 signal ywin					: std_logic;
 signal draw					: std_logic;
-constant max_value      : natural := 4;
+constant max_value      : natural := 9;
 constant mim_value		: natural := 1;
 
 signal read_data_in    : std_logic:='0';
@@ -87,7 +87,7 @@ read_inputs_data_in:process
 						read(linea,input);
 						data_in <= input;
 				end if;
-				wait for PERIOD;
+				wait for 2*PERIOD;
 		end loop;
 		wait;
 	end process read_inputs_data_in;	
@@ -132,7 +132,6 @@ read_inputs_data_in:process
 		constant x_ganha : string := "O Computador Venceu";
 		constant y_ganha : string := "O Jogador Venceu";
 		constant empate : string := "Empate";
-		constant erro : string := "Erro";
 	begin
 		while true loop
 			if (flag_write ='1')then
@@ -148,7 +147,7 @@ read_inputs_data_in:process
 					write(linea, empate);
 				end if;
 			end if;
-			wait for PERIOD;
+			wait for 2*PERIOD;
 		end loop; 
 	end process write_outputs; 
 	

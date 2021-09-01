@@ -22,9 +22,9 @@ VZGT9gBQibnkGDz><NJHeR3
 !s100 Rl6^Zf5=zhmM]aQg6BZ5_3
 Z7 OV;C;10.3c;59
 31
-Z8 !s110 1630446931
+Z8 !s110 1630521087
 !i10b 1
-Z9 !s108 1630446931.611000
+Z9 !s108 1630521087.919000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/GETMOVE.vhd|
 Z11 !s107 C:/altera/14.1/tictactoe/GETMOVE.vhd|
 !i113 1
@@ -66,7 +66,7 @@ R7
 31
 R8
 !i10b 1
-Z18 !s108 1630446931.209000
+Z18 !s108 1630521087.555000
 Z19 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/PICK.vhd|
 Z20 !s107 C:/altera/14.1/tictactoe/PICK.vhd|
 !i113 1
@@ -93,7 +93,7 @@ R20
 R12
 R13
 Etb_tictactoe
-Z21 w1630446614
+Z21 w1630519847
 R2
 Z22 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R15
@@ -108,9 +108,9 @@ VHFEbX8=abe8VMdW;0J_[=0
 !s100 V0]1c7>>>m?=mdOW=FYeN2
 R7
 31
-Z25 !s110 1630446932
+Z25 !s110 1630521088
 !i10b 1
-Z26 !s108 1630446932.002000
+Z26 !s108 1630521088.299000
 Z27 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/tb_tictactoe.vhd|
 Z28 !s107 C:/altera/14.1/tictactoe/tb_tictactoe.vhd|
 !i113 1
@@ -125,8 +125,8 @@ R4
 DEx4 work 12 tb_tictactoe 0 22 HFEbX8=abe8VMdW;0J_[=0
 l46
 L11
-Vg9SSfD3T`G`]X6XPm4PQh1
-!s100 FXzJXaO6km7324KZnmO5C2
+V7BTBKMAiM?H[T^6=M>VCN0
+!s100 6;]V7a3WhW=4a8SCBGGGD0
 R7
 31
 R25
@@ -138,7 +138,7 @@ R28
 R12
 R13
 Etictactoe
-Z29 w1630445560
+Z29 w1630517559
 R2
 R3
 R4
@@ -151,9 +151,9 @@ V1Q[Lz[Vl6<efA`RWeDi[@0
 !s100 ;=H=6F?:gkD^XJXo^cXkK0
 R7
 31
-Z32 !s110 1630446930
+Z32 !s110 1630521086
 !i10b 1
-Z33 !s108 1630446930.437000
+Z33 !s108 1630521086.851000
 Z34 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/tictactoe.vhd|
 Z35 !s107 C:/altera/14.1/tictactoe/tictactoe.vhd|
 !i113 1
@@ -193,7 +193,7 @@ R7
 31
 R32
 !i10b 1
-!s108 1630446930.373000
+!s108 1630521086.787000
 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/TTTdefs.vhd|
 !s107 C:/altera/14.1/tictactoe/TTTdefs.vhd|
 !i113 1
@@ -213,9 +213,9 @@ VPLS<d@EFiPYNEhDz[Y7d_3
 !s100 LU<UCzG0U=fJP=L8;5mlk2
 R7
 31
-R32
+R8
 !i10b 1
-Z39 !s108 1630446930.820000
+Z39 !s108 1630521087.205000
 Z40 !s90 -reportprogress|300|-93|-work|work|C:/altera/14.1/tictactoe/TwoInARow.vhd|
 Z41 !s107 C:/altera/14.1/tictactoe/TwoInARow.vhd|
 !i113 1
@@ -232,7 +232,7 @@ V?14z5lAYZD]eS3gz]SbJG1
 !s100 L^6VhVJYLgH<2EHnL@UVb0
 R7
 31
-R32
+R8
 !i10b 1
 R39
 R40

@@ -1,5 +1,4 @@
 # Reading C:/altera/14.1/modelsim_ase/tcl/vsim/pref.tcl
-# ERROR: No extended dataflow license exists
 # do tictactoe_run_msim_rtl_vhdl.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -15,17 +14,17 @@
 # 
 # vcom -93 -work work {C:/altera/14.1/tictactoe/TTTdefs.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 18:55:30 on Aug 31,2021
+# Start time: 15:31:26 on Sep 01,2021
 # vcom -reportprogress 300 -93 -work work C:/altera/14.1/tictactoe/TTTdefs.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package TTTdefs
-# End time: 18:55:30 on Aug 31,2021, Elapsed time: 0:00:00
+# End time: 15:31:26 on Sep 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/altera/14.1/tictactoe/tictactoe.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 18:55:30 on Aug 31,2021
+# Start time: 15:31:26 on Sep 01,2021
 # vcom -reportprogress 300 -93 -work work C:/altera/14.1/tictactoe/tictactoe.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -33,11 +32,11 @@
 # -- Loading package TTTdefs
 # -- Compiling entity tictactoe
 # -- Compiling architecture behavioral of tictactoe
-# End time: 18:55:30 on Aug 31,2021, Elapsed time: 0:00:00
+# End time: 15:31:27 on Sep 01,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/altera/14.1/tictactoe/TwoInARow.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 18:55:30 on Aug 31,2021
+# Start time: 15:31:27 on Sep 01,2021
 # vcom -reportprogress 300 -93 -work work C:/altera/14.1/tictactoe/TwoInARow.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -45,11 +44,11 @@
 # -- Loading package TTTdefs
 # -- Compiling entity TwoInARow
 # -- Compiling architecture TwoInARow_arch of TwoInARow
-# End time: 18:55:31 on Aug 31,2021, Elapsed time: 0:00:01
+# End time: 15:31:27 on Sep 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/altera/14.1/tictactoe/PICK.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 18:55:31 on Aug 31,2021
+# Start time: 15:31:27 on Sep 01,2021
 # vcom -reportprogress 300 -93 -work work C:/altera/14.1/tictactoe/PICK.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -58,11 +57,11 @@
 # -- Loading package TTTdefs
 # -- Compiling entity PICK
 # -- Compiling architecture PICK_arch of PICK
-# End time: 18:55:31 on Aug 31,2021, Elapsed time: 0:00:00
+# End time: 15:31:27 on Sep 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/altera/14.1/tictactoe/GETMOVE.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 18:55:31 on Aug 31,2021
+# Start time: 15:31:27 on Sep 01,2021
 # vcom -reportprogress 300 -93 -work work C:/altera/14.1/tictactoe/GETMOVE.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -70,12 +69,12 @@
 # -- Loading package TTTdefs
 # -- Compiling entity GETMOVE
 # -- Compiling architecture GETMOVE_arch of GETMOVE
-# End time: 18:55:31 on Aug 31,2021, Elapsed time: 0:00:00
+# End time: 15:31:28 on Sep 01,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/altera/14.1/tictactoe/tb_tictactoe.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 18:55:31 on Aug 31,2021
+# Start time: 15:31:28 on Sep 01,2021
 # vcom -reportprogress 300 -93 -work work C:/altera/14.1/tictactoe/tb_tictactoe.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -85,12 +84,12 @@
 # -- Loading package TTTdefs
 # -- Compiling entity tb_tictactoe
 # -- Compiling architecture teste of tb_tictactoe
-# End time: 18:55:32 on Aug 31,2021, Elapsed time: 0:00:01
+# End time: 15:31:28 on Sep 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_tictactoe
 # vsim -gui "+altera" -l msim_transcript -do "tictactoe_run_msim_rtl_vhdl.do" 
-# Start time: 18:55:32 on Aug 31,2021
+# Start time: 15:31:28 on Sep 01,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -108,7 +107,7 @@
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 300 ns
+# run 400 ns
 # ** Note: RESET
 #    Time: 15 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
 # ** Note: RESET
@@ -125,5 +124,53 @@
 #    Time: 115 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
 # ** Note:    empty | empty | empty
 #    Time: 115 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
-# End time: 18:58:10 on Aug 31,2021, Elapsed time: 0:02:38
+# ** Note: Tabuleiro: 
+#    Time: 155 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note:    y | empty | y
+#    Time: 155 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note:    empty | x | empty
+#    Time: 155 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note:    empty | empty | empty
+#    Time: 155 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: Tabuleiro: 
+#    Time: 235 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note:    y | x | y
+#    Time: 235 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note:    empty | x | empty
+#    Time: 235 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note:    y | empty | empty
+#    Time: 235 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 245 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 255 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 265 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 275 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 285 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 295 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 305 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 315 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 325 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 335 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 345 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 355 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 365 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 375 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 385 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# ** Note: PC WINS
+#    Time: 395 ns  Iteration: 1  Instance: /tb_tictactoe/UUT
+# End time: 15:33:02 on Sep 01,2021, Elapsed time: 0:01:34
 # Errors: 0, Warnings: 0
