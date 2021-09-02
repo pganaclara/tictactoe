@@ -94,26 +94,32 @@ U4: GETMOVE port map (PLAYER => X, BOARD => board, MOVE => PCMOVE);
             if (board(YMOVE) /= EMPTY) then -- se a casa estiver ocupada ele não pode fazer
               state <= YMOVING;
             else
-              board(YMOVE) <= Y;        -- Se a casa estiver vazia, o jogador pode fazer o movimento.
-              state <= XMOVING;
-				end if;
-
-        when XMOVING => -- imprime o tabuleiro
 			report "Tabuleiro: ";
 			report "   " & Square'image(board(1)) & " | " & Square'image(board(2)) & " | " & Square'image(board(3));
 			report "   " & Square'image(board(4)) & " | " & Square'image(board(5)) & " | " & Square'image(board(6));
 			report "   " & Square'image(board(7)) & " | " & Square'image(board(8)) & " | " & Square'image(board(9));
 			
+              board(YMOVE) <= Y;        -- Se a casa estiver vazia, o jogador pode fazer o movimento.
+              state <= XMOVING;
+				end if;
+
+        when XMOVING => -- imprime o tabuleiro
+			if winpc(BOARD) = '0' and winplayer(BOARD) = '0' then
+			report "Tabuleiro: ";
+			report "   " & Square'image(board(1)) & " | " & Square'image(board(2)) & " | " & Square'image(board(3));
+			report "   " & Square'image(board(4)) & " | " & Square'image(board(5)) & " | " & Square'image(board(6));
+			report "   " & Square'image(board(7)) & " | " & Square'image(board(8)) & " | " & Square'image(board(9));
 			 XMOVE <= PCMOVE;
 			 board(PCMOVE) <= X;
           state <= YMOVING;
+			end if;
 					
 			when others =>
 				DRAW <= '0'; XWIN <= '0';
 				
       end case;
 		end if;
-    end if;
+    end if;	 
 	 if winpc(BOARD) = '1' then
 		XWIN <= '1';
 		YWIN <= '0';
