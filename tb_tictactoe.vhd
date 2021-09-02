@@ -29,7 +29,7 @@ signal rst					: std_logic;
 signal xwin					: std_logic;
 signal ywin					: std_logic;
 signal draw					: std_logic;
-constant max_value      : natural := 9;
+constant max_value      : natural := 11;
 constant mim_value		: natural := 1;
 
 signal read_data_in    : std_logic:='0';
